@@ -109,16 +109,6 @@ describe('index', () => {
       expect(questionContainer.innerHTML).to.eq('Lightning never strikes in the same place twice')
     })
 
-    it('also displays the true and false buttons', function(){
-      displayQuestionOnClick()
-      let btn = document.querySelector('.btn')
-      btn.dispatchEvent(event)
-      let questionContainer = document.querySelector('.question-container')
-      let btns = document.querySelector('.true-false-list').querySelectorAll('.btn')
-      setTimeout(function(){
-        expect(Array.from(btns[0].classList)).to.not.include('hide')
-        expect(Array.from(btns[1].classList)).to.not.include('hide')
-      }, 500)
-    })
+
   })
 })
